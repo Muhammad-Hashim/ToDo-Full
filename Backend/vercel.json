@@ -1,0 +1,27 @@
+{
+    
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build"
+      },
+      {
+        "src": "server/**/*",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/.*",
+        "dest": "server/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "client/$1",
+        "headers": {
+          "Cache-Control": "public, max-age=3600"
+        }
+      }
+    ]
+  }
+  
