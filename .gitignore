@@ -1,0 +1,11 @@
+/Backend/node_modules
+/.pnp
+.pnp.js
+/
+# testing
+/coverage
+
+# production
+/build
+
+# Ignore all files and folders except "my_folder"
