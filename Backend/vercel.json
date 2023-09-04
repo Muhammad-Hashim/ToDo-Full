@@ -2,7 +2,7 @@
     
     "builds": [
       {
-        "src": "client/package.json",
+        "src": "/bulid",
         "use": "@vercel/static-build"
       },
       {
