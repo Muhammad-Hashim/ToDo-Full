@@ -1,27 +1,25 @@
 {
-    
-    "builds": [
-      {
-        "src": "/bulid",
-        "use": "@vercel/static-build"
-      },
-      {
-        "src": "server/**/*",
-        "use": "@vercel/node"
+  "builds": [
+    {
+      "src": "/.",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "server/**/*",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "server/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=3600"
       }
-    ],
-    "routes": [
-      {
-        "src": "/.*",
-        "dest": "server/index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "client/$1",
-        "headers": {
-          "Cache-Control": "public, max-age=3600"
-        }
-      }
-    ]
-  }
-  
+    }
+  ]
+}
