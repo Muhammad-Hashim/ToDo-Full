@@ -1,15 +1,16 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
-      "src": "/.*",
-      "dest": "dist/server.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "client/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=3600"
-      }
+      "dest": "index.js"
     }
-  ]
+  ],
+   "rewrites": [{ "source": "/(.*)", "destination": "/" }] 
 }
