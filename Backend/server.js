@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const app = express();
-const port = process.env.PORT || 80; // Use the provided port or default to 3000
+const port = process.env.PORT || ; // Use the provided port or default to 3000
 const cors = require("cors");
 const { Todo, connection } = require("./model/tooddb");
 
