@@ -7,7 +7,15 @@ const { Todo, connection } = require("./model/tooddb");
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: Chttps://deploy-nern-lwhq.vercel.app"),
+    methods: ("POST", "GET),
+    credentials: true
+
+  }
+  
+));
 
 app.get("/", async (req, res) => {
   try {
