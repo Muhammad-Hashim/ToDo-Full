@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(cors(
   {
-    origin: Chttps://deploy-nern-lwhq.vercel.app"),
+    origin:["https://to-do-full-beta.vercel.app"],
     methods: ("POST", "GET),
     credentials: true
 
